@@ -10,7 +10,7 @@ cd nodejs_app
 docker run -d --name node_app_test -p 8000:8000 mmalyj/nodejs_app:${version}
 echo "Testing image: mmalyj/nodejs_app:${version}"
 # Allow the webserver to start up
-sleep 1
+sleep 5
 # Test will be successful if the webpage at the
 # following URL includes the word .success.
 curl -s GET http://127.0.0.1:8000 | grep Hello
